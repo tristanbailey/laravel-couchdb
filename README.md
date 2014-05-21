@@ -14,7 +14,7 @@ Add the package to your `composer.json` and run `composer update`.
 ```json
 {
     "require": {
-        "rbewley4/laravel-couchdb": "*"
+        "rbewley4/laravel-couchdb": "dev-master"
     }
 }
 ```
