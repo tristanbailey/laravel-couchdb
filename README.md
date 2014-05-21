@@ -69,15 +69,31 @@ For more information on CouchDBClient, see [doctrine/couchdb-client](https://git
 
 ```php
 /**
- * @var \Doctrine\CouchDB\CouchDBClient
+ * @var \Rbewley4\Laravel\Couchdb\CouchdbConnection
  */
 $connection = DB::connection('couchdb');
+
+/**
+ * @var \Doctrine\CouchDB\CouchDBClient
+ */
+$couchdb = $connection->getCouchDB();
 ```
+> **Note**:
+> you can invoke methods on CouchDBClient by invoking them on CouchdbConnection. This is accomplished
+> via the use of magic methods.
 
 **Create/Update/Find Document**
 
+Here we demonstrate three different operations that you can perform on CouchDB, and we show three different
+ways that you can invoke these methods:
+
 ```php
+$connection = DB::connection('couchdb');
+$couchdb = $connection->getCouchDB();
+
 list($id, $rev) = $connection->postDocument(array('foo' => 'bar'));
-$connection->putDocument(array('foo' => 'baz'), $id, $rev);
-$doc = $connection->findDocument($id);
+$couchdb->putDocument(array('foo' => 'baz'), $id, $rev);
+$doc = DB::connection('couchdb')->findDocument($id);
 ```
+
+Note that all three methods can be called on $connection or $couchdb.
