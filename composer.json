@@ -1,0 +1,24 @@
+{
+  "name": "rbewley4/laravel-couchdb",
+  "description": "CouchDB database driver for Laravel 4 ",
+  "keywords": ["laravel","couchdb","couch","database"],
+  "authors": [
+    {
+      "name": "Russell Bewley",
+      "homepage": "https://github.com/rbewley4"
+    }
+  ],
+  "license" : "MIT",
+  "require": {
+    "php": ">=5.3.0",
+    "laravel/framework": "4.1.*",
+    "doctrine/couchdb": "dev-master"
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-0": {
+      "Rbewley4\\": "src/"
+    }
+  }
+}
