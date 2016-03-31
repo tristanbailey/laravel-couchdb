@@ -1,4 +1,4 @@
-<?php namespace Rbewley4\Laravel\Couchdb;
+<?php namespace TristanBailey\Laravel\Couchdb;
 
 use \Doctrine\CouchDB\CouchDBClient;
 
