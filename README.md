@@ -1,6 +1,6 @@
 # laravel-couchdb
 
-CouchDB database driver for Laravel 4
+CouchDB database driver for Laravel 4 -> being updated to Laravel 5
 
 ## Dependencies
 
@@ -14,7 +14,7 @@ Add the package to your `composer.json` and run `composer update`.
 ```json
 {
     "require": {
-        "rbewley4/laravel-couchdb": "dev-master"
+        "tristanbailey/laravel-couchdb": "dev-master"
     }
 }
 ```
@@ -22,7 +22,7 @@ Add the package to your `composer.json` and run `composer update`.
 Add the service provider in `app/config/app.php`:
 
 ```php
-'Rbewley4\Laravel\Couchdb\CouchdbServiceProvider',
+'TristanBailey\Laravel\Couchdb\CouchdbServiceProvider',
 ```
 
 The service provider will register a couchdb database extension with the original database manager.
